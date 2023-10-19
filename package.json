@@ -1,0 +1,20 @@
+{
+    "name": "hermes-holders-finder",
+    "version": "1.0.0",
+    "description": "Hermes asset holders finder",
+    "main": "index.js",
+    "author": "Nikola Petrovic CBS",
+    "license": "MIT",
+    "scripts": {
+        "find": "npx ts-node findHermesHolders.ts",
+        "calculate": "npx ts-node calculateTotalHermes.ts"
+    },
+    "dependencies": {
+        "@polkadot/api": "^10.10.1",
+        "@polkadot/util": "^12.5.1",
+        "@sora-substrate/math": "^1.23.8",
+        "fs": "^0.0.1-security",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.2.2"
+    }
+}
