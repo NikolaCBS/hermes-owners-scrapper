@@ -1,21 +1,23 @@
 import { readFileSync } from "fs";
 
 const calculateHermes = () => {
-    let total = 0;
+    let total = BigInt(0);
 
     const hermesHolders = readFileSync("hermes_owners.csv", "utf-8")
         .split("\n")
         .splice(1);
 
     hermesHolders.forEach((owner) => {
-        const amount = owner.split(",")[1];
+        const amount: string = owner.split(",")[4];
 
-        if (!isNaN(+amount)) {
-            total += +amount;
+        if (amount) {
+            total += BigInt(amount);
         }
     });
 
-    console.log(`Total HMX in circulation: ${total}`);
+    total = total / BigInt(Math.pow(10, 18));
+
+    console.log(`Total HMX in circulation: ${total.toString()}`);
 };
 
 calculateHermes();

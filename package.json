@@ -6,8 +6,8 @@
     "author": "Nikola Petrovic CBS",
     "license": "MIT",
     "scripts": {
-        "find": "npx ts-node findHermesHolders.ts",
-        "calculate": "npx ts-node calculateTotalHermes.ts"
+        "find": "npx ts-node src/findHermesHolders.ts",
+        "calculate": "npx ts-node src/calculateTotalHermes.ts"
     },
     "dependencies": {
         "@polkadot/api": "^10.10.1",
