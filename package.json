@@ -7,7 +7,8 @@
     "license": "MIT",
     "scripts": {
         "find": "npx ts-node src/findHermesHolders.ts",
-        "calculate": "npx ts-node src/calculateTotalHermes.ts"
+        "calculate": "npx ts-node src/calculateTotalHermes.ts",
+        "format": "npx ts-node src/formatCSV.ts"
     },
     "dependencies": {
         "@polkadot/api": "^10.10.1",
