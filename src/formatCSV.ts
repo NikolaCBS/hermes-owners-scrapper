@@ -32,7 +32,11 @@ const formatData = () => {
         }
     });
 
-    saveToCSVFile(formatedData, "formated_hermes_owners.csv");
+    saveToCSVFile(
+        formatedData,
+        "user_address,balance_amount,staking_amount,rewards_amount,hermes_total\n",
+        "formated_hermes_owners.csv"
+    );
 };
 
 formatData();

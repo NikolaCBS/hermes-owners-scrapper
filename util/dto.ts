@@ -11,4 +11,9 @@ interface stakingInfo {
     rewards: string;
 }
 
-export { hermesHolder, stakingInfo };
+interface hermesUserTotal {
+    user_address: string;
+    hermes_total: string;
+}
+
+export { hermesHolder, stakingInfo, hermesUserTotal };

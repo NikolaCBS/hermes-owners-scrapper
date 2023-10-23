@@ -78,7 +78,11 @@ const findHermesHolders = async () => {
             : 0
     );
 
-    saveToCSVFile(result, "hermes_owners.csv");
+    saveToCSVFile(
+        result,
+        "user_address,balance_amount,staking_amount,rewards_amount,hermes_total\n",
+        "hermes_owners.csv"
+    );
 };
 
 findHermesHolders()

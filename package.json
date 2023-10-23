@@ -8,7 +8,8 @@
     "scripts": {
         "find": "npx ts-node src/findHermesHolders.ts",
         "calculate": "npx ts-node src/calculateTotalHermes.ts",
-        "format": "npx ts-node src/formatCSV.ts"
+        "format": "npx ts-node src/formatCSV.ts",
+        "extract": "npx ts-node src/extractUserTotal.ts"
     },
     "dependencies": {
         "@polkadot/api": "^10.10.1",

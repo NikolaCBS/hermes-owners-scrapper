@@ -28,16 +28,18 @@ const calculateTotalHermesAmount = (
     return total.toString();
 };
 
-const convertToCSV = (data: object[]): string => {
-    const header =
-        "user_address,balance_amount,staking_amount,rewards_amount,hermes_total\n";
+const convertToCSV = (data: object[], fileHeader: string): string => {
     const rows = data.map((row) => Object.values(row).join(",") + "\n");
 
-    return header + rows.join("");
+    return fileHeader + rows.join("");
 };
 
-const saveToCSVFile = (data: object[], fileName: string) => {
-    const csvData = convertToCSV(data);
+const saveToCSVFile = (
+    data: object[],
+    fileHeader: string,
+    fileName: string
+) => {
+    const csvData = convertToCSV(data, fileHeader);
 
     writeFileSync(fileName, csvData);
 };
